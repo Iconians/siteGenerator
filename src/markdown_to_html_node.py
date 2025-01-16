@@ -16,7 +16,7 @@ def text_node_to_html_node(text_node):
         return LeafNode(tag="b", value=text_node.text)
     elif text_node.text_type == TextType.ITALIC.value:
         return LeafNode(tag="i", value=text_node.text)
-    elif text_node.text_type == TextType.CODE:
+    elif text_node.text_type == TextType.CODE.value:
         return LeafNode(tag="code", value=text_node.text)
     elif text_node.text_type == TextType.LINKS.value:
         return LeafNode(tag="a", value=text_node.text, props={"href": text_node.url})
